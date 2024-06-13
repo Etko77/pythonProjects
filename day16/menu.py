@@ -1,5 +1,6 @@
 class MenuItem:
     """Models each Menu Item."""
+
     def __init__(self, name, water, milk, coffee, cost):
         self.name = name
         self.cost = cost
@@ -12,6 +13,7 @@ class MenuItem:
 
 class Menu:
     """Models the Menu with drinks."""
+
     def __init__(self):
         self.menu = [
             MenuItem(name="latte", water=200, milk=150, coffee=24, cost=2.5),
@@ -24,7 +26,9 @@ class Menu:
         options = ""
         for item in self.menu:
             options += f"{item.name}/"
-        return options
+        new_list = list(options)
+        new_list[len(new_list) - 1] = ""
+        return "".join(new_list)
 
     def find_drink(self, order_name):
         """Searches the menu for a particular drink by name. Returns that item if it exists, otherwise returns None"""
@@ -32,3 +36,4 @@ class Menu:
             if item.name == order_name:
                 return item
         print("Sorry that item is not available.")
+
