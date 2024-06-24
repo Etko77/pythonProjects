@@ -27,6 +27,7 @@ def coffee_machine():
         print("Error. Invalid item")
         return
 
+<<<<<<< HEAD
     if machine.is_resource_sufficient(ordered_item):
         machine.make_coffee(ordered_item)
         money_machine.make_payment(ordered_item.cost)
@@ -44,3 +45,10 @@ while is_on:
         pass
     elif off_switch == "Y":
         is_on = False
+=======
+    money_machine.make_payment(ordered_item.cost)
+    money_machine.report()
+
+
+coffee_machine()
+>>>>>>> 5ac7aac (Add functionality)
