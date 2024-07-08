@@ -20,7 +20,7 @@ print(colors_list)
 tim.setheading(225)
 tim.forward(250)
 tim.setheading(0)
-for i in range(1, len(colors_list)*10):
+for i in range(1, (len(colors_list)*10) +1):
     tim.dot(20, random.choice(colors_list))
     tim.forward(50)
 
